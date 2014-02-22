@@ -1,10 +1,9 @@
 'use strict';
 
 angular.module('longformApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', 'Gdocs', function ($scope, Gdocs) {
+    Gdocs.getSpreadsheetTabletop(function(sheet){
+      window.spreadsheets = data;
+      console.dir(data);
+    });
+  }]);
