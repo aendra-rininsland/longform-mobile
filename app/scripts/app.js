@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('syriaApp', [
+angular.module('longformApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

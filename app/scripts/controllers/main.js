@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('syriaApp')
+angular.module('longformApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
