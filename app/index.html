@@ -25,7 +25,49 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+<div class="off-canvas-wrap">
+  <div class="fixed">
+    <section class="top-bar-section">
+      <nav class="top-bar" data-topbar>
+        <ul class="left">
+          <li><a href="/#">T</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#">?</a></li>
+          <li><a class="right-off-canvas-toggle">Menu</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+  <div class="inner-wrap">
+
+    <!-- Off Canvas Item Menu -->
+    <aside class="right-off-canvas-menu">
+        <ul ng-controller="MainCtrl">
+          <li ng-repeat="item in chapters"><a ng-href="#/{{ item.catchline }}">{{ item.name }}</a></li>
+        </ul>
+    </aside>
+
+    <!-- main content goes here -->
     <div class="container" ng-view=""></div>
+
+  <!-- close the off-canvas menu -->
+  <a class="exit-off-canvas"></a>
+
+  </div>
+  <div class="fixed-bottom">
+    <dl class="tabs" data-tab>
+      <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
+      <dd><a href="#panel2-2">Tab 2</a></dd>
+      <dd><a href="#panel2-3">Tab 3</a></dd>
+      <dd><a href="#panel2-4">Tab 4</a></dd>
+    </dl>
+  </div>
+</div>
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -56,6 +98,7 @@
     <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="bower_components/foundation/js/foundation.js"></script>
     <script src="bower_components/tabletop/src/tabletop.js"></script>
+    <script src="bower_components/angular-markdown-directive/markdown.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,6 +106,17 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/services.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/stories.js"></script>
+        <script src="scripts/controllers/photos.js"></script>
+        <script src="scripts/controllers/videos.js"></script>
+        <script src="scripts/controllers/graphics.js"></script>
+        <script src="bower_components/showdown/compressed/showdown.js"></script>
         <!-- endbuild -->
+        <script src='//player.ooyala.com/v3/NzUwODU5MDkxMWQyNmI0ZWZhOTViMzI0'></script>
+        <script type="text/javascript">
+          window.onload = function() {
+            $(document).foundation();
+          }
+        </script>
 </body>
 </html>

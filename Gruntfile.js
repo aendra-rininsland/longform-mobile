@@ -67,7 +67,9 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
-          open: true,
+          open: {
+            appName: 'open "/Applications/Google Chrome.app"'
+          },
           base: [
             '.tmp',
             '<%= yeoman.app %>'
