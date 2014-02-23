@@ -1,12 +1,17 @@
-<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/f8a34712.vendor.css"><link rel="stylesheet" href="styles/a5896f90.main.css"><body ng-app="longformApp"><!--[if lt IE 7]>
+<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/f8a34712.vendor.css"><link rel="stylesheet" href="styles/501d67e6.main.css"><body ng-app="longformApp"><!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><!-- Add your site or application content here --><div class="container" ng-view=""></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');</script><!--[if lt IE 9]>
+    <![endif]--><!-- Add your site or application content here --><div class="off-canvas-wrap"><div class="fixed"><section class="top-bar-section"><nav class="top-bar" data-topbar=""><ul class="left"><li><a href="/#">T</a></li></ul><ul class="right"><li><a href="#">?</a></li><li><a class="right-off-canvas-toggle">Menu</a></li></ul></nav></section></div><div class="inner-wrap"><!-- Off Canvas Item Menu --><aside class="right-off-canvas-menu"><ul ng-controller="MainCtrl"><li ng-repeat="item in chapters"><a ng-href="#/{{ item.catchline }}">{{ item.name }}</a></li></ul></aside><!-- main content goes here --><div class="container" ng-view=""></div><!-- close the off-canvas menu --><a class="exit-off-canvas"></a></div></div><!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]--><script src="scripts/1b11e095.vendor.js"></script><script src="scripts/c7aae678.scripts.js"></script>
+    <![endif]--><script src="scripts/4bf64101.vendor.js"></script><script src="scripts/22fbd387.scripts.js"></script><script src="//player.ooyala.com/v3/NzUwODU5MDkxMWQyNmI0ZWZhOTViMzI0"></script><script type="text/javascript">window.onload = function() {
+            $('body').height($(window).height());
+
+            $('.slide1').click(function(){
+              $(this).css('display', 'none'); 
+              $('.slide2').css('display', 'block');
+            });
+
+          }
+          // $(window).resize(function(){
+          //   $('body').height($(window).height());
+          // });</script>

@@ -1,0 +1,8 @@
+<div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide" ng-repeat="item in graphics"><img ng-src="{{ item.filename }}" alt="{{ item.title }}"><div class="captionp"><p>{{ item.title }}</p></div></div></div></div><div class="fixed-bottom"><dl class="tabs" data-tab="" ng-controller="MainCtrl"><dd class="articles"><a ng-href="/#{{ path }}/"><span>Articles</span></a></dd><dd class="photos"><a ng-href="/#{{ path }}/photos"><span>Photos</span></a></dd><dd class="videos"><a ng-href="/#{{ path }}/videos"><span>Videos</span></a></dd><dd class="graphics"><a ng-href="/#{{ path }}/graphics"><span>Graphics</span></a></dd></dl></div><script type="text/javascript">// $(function(){
+//   var mySwiper = $('.swiper-container').swiper({
+//     //Your options here:
+//     mode:'horizontal',
+//     loop: true
+//     //etc..
+//   });
+// })</script>
