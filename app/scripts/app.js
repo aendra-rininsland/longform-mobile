@@ -27,7 +27,7 @@ angular.module('longformApp', [
         controller: 'PhotoCtrl'
       })
 
-      .when('/:chapterId/video', {
+      .when('/:chapterId/videos', {
         templateUrl: 'views/videos.html',
         controller: 'VideoCtrl'
       })

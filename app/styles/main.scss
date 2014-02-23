@@ -1,3 +1,93 @@
+body {
+    background: black;
+}
+
+.inner-wrap {
+    background: black;
+}
+.container {
+    background: black;
+    color: white;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.move-left a.exit-off-canvas {
+    background: transparent;
+}
+
+.story h1 {
+    color: #ccc;
+}
+
+.captionp {
+    color: white;
+}
+
+dd a, dd.active {
+    width: 100px;
+    height: 100px;
+    background-color: black !important;
+}
+
+dd a:hover {
+    background-color: white !important;
+}
+
+dd.articles {
+    a span {
+        visibility: hidden;
+    }
+
+    a {
+        background-image: url('img/article_off.png');
+    }
+
+    a:hover {
+        background-image: url('img/article_on.png');
+    }    
+}
+dd.photos {
+    a span {
+        visibility: hidden;
+    }    
+    a {
+        background-image: url('img/pics_off.png');
+    }    
+
+    a:hover {
+        background-image: url('img/pics_on.png');
+    }    
+}
+dd.videos {
+    a span {
+        visibility: hidden;
+    }
+    a {
+        background-image: url('img/video_off.png');
+    }   
+    a:hover {
+        background-image: url('img/video_on.png');
+    }     
+}
+dd.graphics {
+    a span {
+       visibility: hidden;
+    }
+    a {
+        background-image: url('img/graphic_off.png');
+    }  
+    a:hover {
+        background-image: url('img/graphic_on.png');
+    }      
+}
+
+
+/* original stuff */
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -90,9 +180,14 @@ body {
 .fixed-bottom {
     position: fixed;
     bottom: 0;
-    left: 50%;
+    left: 0;
+    width: 100%;
+    display: block;
+    background: black;
 }
 
 .fixed-bottom .tabs {
-    margin-left: -50%;
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
 }

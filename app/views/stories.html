@@ -1,0 +1,13 @@
+<div class="story" ng-repeat="story in stories">
+  <h1>{{ story.title }}</h1> 
+  <p btf-markdown="story.content"></p>
+</div>
+
+<div class="fixed-bottom">
+  <dl class="tabs" data-tab ng-controller="MainCtrl">
+    <dd class="articles"><a ng-href="/#{{ path }}/"><span>Articles</span></a></dd>
+    <dd class="photos"><a ng-href="/#{{ path }}/photos"><span>Photos</span></a></dd>
+    <dd class="videos"><a ng-href="/#{{ path }}/videos"><span>Videos</span></a></dd>
+    <dd class="graphics"><a ng-href="/#{{ path }}/graphics"><span>Graphics</span></a></dd>
+  </dl>
+</div>  
