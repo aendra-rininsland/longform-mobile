@@ -14,10 +14,10 @@ angular.module('longformApp.services', ['ngResource'])
           key: SPREADSHEET_KEY,
           callback: function(data, tabletop) {
             window.data = data;
-            if(callback && typeof(callback) === "function") {
+            if(callback && typeof(callback) === 'function') {
               $rootScope.$apply(function() {
                 callback(data);
-              })
+              });
             }
           },
           simpleSheet: false,
@@ -26,48 +26,7 @@ angular.module('longformApp.services', ['ngResource'])
       } else {
         callback(window.spreadsheetData);
       }
-
-    }
-
-    factory.getSpreadsheet = function(callback) {
-      // var url = 'https://spreadsheets.google.com/feeds/cells/o13394135408524254648.240766968415752635/od6/public/values?alt=json-in-script&callback=JSON_CALLBACK';
-      var url = 'https://spreadsheets.google.com/feeds/cells/' + SPREADSHEET_KEY + '/od6/public/values?alt=json-in-script&callback=JSON_CALLBACK';
-      $http.jsonp(url).success(function(data){
-        callback(parseTableData(data));
-      });
-    }
-
-    function parseTableData(data) {
-      var input = data.feed.entry;
-      var output = {
-        thead: [],
-        tbody: []
-      }
-
-      var currentRow = 1;
-
-      for (var i = 0; i < input.length; i++) {
-        var row = parseInt(input[i]['gs$cell'].row);
-        var col = parseInt(input[i]['gs$cell'].col);
-        var content = input[i]['gs$cell']['$t'];
-
-        if(row != currentRow){
-          currentRow = row;
-        }
-
-        if(row == 1){
-          output.thead.push(content);
-        }else {
-          if(col == 1){
-            output.tbody.push([]);
-          }
-          output.tbody[row-2].push(content);
-        }
-      };
-
-      return output;
-    }
-
+    };
 
     return factory;
   });
