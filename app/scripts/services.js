@@ -2,6 +2,8 @@
 
 /* Services */
 
+/*global Tabletop*/
+
 /** Liberally stolen from https://github.com/7hny/angular-google-spreadsheet/blob/master/app/js/services.js */
 
 angular.module('longformApp.services', ['ngResource'])
