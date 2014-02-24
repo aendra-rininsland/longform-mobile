@@ -7,7 +7,7 @@ angular.module('longformApp')
       var photos = sheets.photos.elements;
       var chapterCatchline = $routeParams.chapterId;
       for (var i = 0; i < photos.length; i++) {
-        if (photos[i].chaptercatchline == chapterCatchline) {
+        if (photos[i].chaptercatchline === chapterCatchline) {
           $scope.photos.push(photos[i]);
         }
       }

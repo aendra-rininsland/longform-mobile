@@ -7,7 +7,7 @@ angular.module('longformApp')
       var videos = sheets.videos.elements;
       var chapterCatchline = $routeParams.chapterId;
       for (var i = 0; i < videos.length; i++) {
-        if (videos[i].chaptercatchline == chapterCatchline) {
+        if (videos[i].chaptercatchline === chapterCatchline) {
           $scope.videos.push(videos[i]);
         }
       }

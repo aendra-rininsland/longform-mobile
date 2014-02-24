@@ -7,7 +7,7 @@ angular.module('longformApp')
       var stories = sheets.articles.elements;
       var chapterCatchline = $routeParams.chapterId;
       for (var i = 0; i < stories.length; i++) {
-        if (stories[i].chaptercatchline == chapterCatchline) {
+        if (stories[i].chaptercatchline === chapterCatchline) {
           $scope.stories.push(stories[i]);
         }
       }

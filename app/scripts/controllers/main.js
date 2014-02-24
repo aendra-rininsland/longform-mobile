@@ -1,6 +1,6 @@
 'use strict';
 
-/*globals: $*/
+/*global $*/
 
 angular.module('longformApp')
   .controller('MainCtrl',
@@ -21,7 +21,6 @@ angular.module('longformApp')
         $scope.path = $location.path();
       }
 
-      
       try {
         $(document).foundation();
       } catch (TypeError) {

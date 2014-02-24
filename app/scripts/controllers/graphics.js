@@ -7,7 +7,7 @@ angular.module('longformApp')
       var graphics = sheets.graphics.elements;
       var chapterCatchline = $routeParams.chapterId;
       for (var i = 0; i < graphics.length; i++) {
-        if (graphics[i].chaptercatchline == chapterCatchline) {
+        if (graphics[i].chaptercatchline === chapterCatchline) {
           $scope.graphics.push(graphics[i]);
         }
       }
