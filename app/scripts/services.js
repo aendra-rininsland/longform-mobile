@@ -12,7 +12,7 @@ angular.module('longformApp.services', ['ngResource'])
       if (!window.hasOwnProperty('spreadsheetData')) {
         Tabletop.init({
           key: SPREADSHEET_KEY,
-          callback: function(data, tabletop) {
+          callback: function(data) {
             window.data = data;
             if(callback && typeof(callback) === 'function') {
               $rootScope.$apply(function() {
