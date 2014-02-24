@@ -176,7 +176,6 @@ body {
     }
 }
 
-
 .fixed-bottom {
     position: fixed;
     bottom: 0;
@@ -190,4 +189,18 @@ body {
     position: relative;
     left: 50%;
     margin-left: -200px;
+}
+
+nav.topbar ul li a span {
+    visibility: hidden;
+}
+
+nav.topbar ul li a {
+    background-image: url('img/TcircleWhite.png') center middle no-repeat; 
+    height: 40px;
+    width: 40px;
+}
+
+.right-off-canvas-menu {
+    top: 25px !important;
 }

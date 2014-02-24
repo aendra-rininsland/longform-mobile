@@ -31,11 +31,11 @@
     <section class="top-bar-section">
       <nav class="top-bar" data-topbar>
         <ul class="left">
-          <li><a href="/#">T</a></li>
+          <li><a href="/#" class="tlogo"><span>The Times</span></a></li>
         </ul>
         <ul class="right">
           <li><a href="#">?</a></li>
-          <li><a class="right-off-canvas-toggle">Menu</a></li>
+          <li><a class="right-small right-off-canvas-toggle">Menu</a></li>
         </ul>
       </nav>
     </section>
@@ -44,8 +44,12 @@
 
     <!-- Off Canvas Item Menu -->
     <aside class="right-off-canvas-menu">
-        <ul ng-controller="MainCtrl">
-          <li ng-repeat="item in chapters"><a ng-href="#/{{ item.catchline }}">{{ item.name }}</a></li>
+        <ul class="off-canvas-list" ng-controller="MainCtrl">
+          <li ng-repeat-start="item in chapters"><label>{{ item.name }}<label></li>
+          <li><a ng-href="#/{{ item.catchline }}/">Stories</a></li>
+          <li><a ng-href="#/{{ item.catchline }}/photos">Photos</a></li>
+          <li><a ng-href="#/{{ item.catchline }}/videos">Videos</a></li>
+          <li ng-repeat-end><a ng-href="#/{{ item.catchline }}/graphics">Graphics</a></li>
         </ul>
     </aside>
 
@@ -78,6 +82,7 @@
     <script src="bower_components/foundation/js/foundation.js"></script>
     <script src="bower_components/tabletop/src/tabletop.js"></script>
     <script src="bower_components/angular-markdown-directive/markdown.js"></script>
+    <script src="bower_components/swiper/dist/idangerous.swiper.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

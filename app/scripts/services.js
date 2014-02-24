@@ -9,18 +9,24 @@ angular.module('longformApp.services', ['ngResource'])
   .factory('Gdocs', function($resource, $rootScope, $http, SPREADSHEET_KEY) {
     var factory = {};
     factory.getSpreadsheetTabletop = function(callback) {
-      Tabletop.init({
-        key: SPREADSHEET_KEY,
-        callback: function(data, tabletop) {
-          if(callback && typeof(callback) === "function") {
-            $rootScope.$apply(function() {
-              callback(data);
-            })
-          }
-        },
-        simpleSheet: false,
-        parseNumbers: true
-      });
+      if (!window.hasOwnProperty('spreadsheetData')) {
+        Tabletop.init({
+          key: SPREADSHEET_KEY,
+          callback: function(data, tabletop) {
+            window.data = data;
+            if(callback && typeof(callback) === "function") {
+              $rootScope.$apply(function() {
+                callback(data);
+              })
+            }
+          },
+          simpleSheet: false,
+          parseNumbers: true
+        });
+      } else {
+        callback(window.spreadsheetData);
+      }
+
     }
 
     factory.getSpreadsheet = function(callback) {

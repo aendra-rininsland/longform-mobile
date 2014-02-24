@@ -35,7 +35,7 @@ angular.module('longformApp', [
       .when('/:chapterId/graphics', {
         templateUrl: 'views/graphics.html',
         controller: 'GraphicCtrl'
-      })      
+      })
 
       // Done editing //                 
       .otherwise({
